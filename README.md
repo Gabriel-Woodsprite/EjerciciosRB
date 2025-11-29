@@ -1,22 +1,17 @@
 ﻿# EjerciciosRB
 # EjerciciosRB
 
-Collecting Adafruit_DHT
-  Downloading Adafruit_DHT-1.4.0.tar.gz (15 kB)
-  Preparing metadata (setup.py) ... done
-Building wheels for collected packages: Adafruit_DHT
-  DEPRECATION: Building 'Adafruit_DHT' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'Adafruit_DHT'. Discussion can be found at https://github.com/pypa/pip/issues/6334
-  Building wheel for Adafruit_DHT (setup.py) ... error
-  error: subprocess-exited-with-error
-  
-  × python setup.py bdist_wheel did not run successfully.
-  │ exit code: 1
-  ╰─> [1 lines of output]
-      Could not detect if running on the Raspberry Pi or Beaglebone Black.  If this failure is unexpected, you can run again with --force-pi or --force-bbb parameter to force using the Raspberry Pi or Beaglebone Black respectively.
-      [end of output]
-  
-  note: This error originates from a subprocess, and is likely not a problem with pip.
-  ERROR: Failed building wheel for Adafruit_DHT
-  Running setup.py clean for Adafruit_DHT
-Failed to build Adafruit_DHT
-ERROR: Failed to build installable wheels for some pyproject.toml based projects (Adafruit_DHT)
+sudo pip3 uninstall RPi.GPIO
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+    
+    For more information visit http://rptl.io/venv
