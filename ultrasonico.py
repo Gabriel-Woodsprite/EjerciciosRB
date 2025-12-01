@@ -20,3 +20,4 @@ while True:
     
   distancia = (fin-inicio)*17000
   print(f'Distancia: {distancia}cm')
+  time.sleep(3)

@@ -11,9 +11,10 @@ def mover(angulo):
   pwm.ChangeDutyCycle(duty)
   time.sleep(0.5)
   
-mover(0);
-mover(90);
-mover(180)
+while True:  
+  mover(0);
+  mover(90);
+  mover(180)
 
 pwm.stop()
 GPIO.cleanup()

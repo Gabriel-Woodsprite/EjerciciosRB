@@ -1,8 +1,18 @@
-import Adafruit_DHT
+# dht_test.py
+from dht11_gpiozero import DHT11Device
+import time
 
-sensor = Adafruit_DHT.DHT11
-pin = 4
+s = DHT11Device(4, poll_interval=2.0)
 
-while True:
-  h, t = Adafruit_DHT.read(sensor, pin)
-  print(f'Temperatura: {t} | Humedad: {h}')
+def on_update(dev):
+    print("Updated: temp=", dev.temperature, "hum=", dev.humidity)
+
+s.when_updated = on_update
+
+try:
+    while True:
+        print("Temp:", s.temperature, "Hum:", s.humidity)
+        time.sleep(2)
+except KeyboardInterrupt:
+    s.close()
+    print("bye")
